@@ -1,0 +1,447 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>📕D2024_8_24 | Hrein's Blog</title><meta name="author" content="Hrein"><meta name="copyright" content="Hrein"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="单包管理和多包管理单包管理和多包管理是指在软件项目中如何组织和管理依赖项的两种不同方法。以下是对这两种方法的解释： 单包管理（Single Package Management）单包管理是指在一个项目中只有一个 package.json 文件，所有的依赖项都在这个文件中定义。适用于小型项目或单一模块的项目。 优点： 简单易管理：只有一个 package.json 文件，依赖项管理简单。 快速设置：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="📕D2024_8_24">
+<meta property="og:url" content="https://qhiqiefnqe-f.github.io/2024/08/24/Diary/2024_8_24/index.html">
+<meta property="og:site_name" content="Hrein&#39;s Blog">
+<meta property="og:description" content="单包管理和多包管理单包管理和多包管理是指在软件项目中如何组织和管理依赖项的两种不同方法。以下是对这两种方法的解释： 单包管理（Single Package Management）单包管理是指在一个项目中只有一个 package.json 文件，所有的依赖项都在这个文件中定义。适用于小型项目或单一模块的项目。 优点： 简单易管理：只有一个 package.json 文件，依赖项管理简单。 快速设置：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://qhiqiefnqe-f.github.io/assets/Hrein.jpg">
+<meta property="article:published_time" content="2024-08-24T01:20:19.000Z">
+<meta property="article:modified_time" content="2024-09-15T14:04:28.253Z">
+<meta property="article:author" content="Hrein">
+<meta property="article:tag" content="frontend">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qhiqiefnqe-f.github.io/assets/Hrein.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://qhiqiefnqe-f.github.io/2024/08/24/Diary/2024_8_24/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '📕D2024_8_24',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-09-15 22:04:28'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/assets/Hrein.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/assets/nanjiluo.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Hrein's Blog"><span class="site-name">Hrein's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">📕D2024_8_24</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-08-24T01:20:19.000Z" title="发表于 2024-08-24 09:20:19">2024-08-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-15T14:04:28.253Z" title="更新于 2024-09-15 22:04:28">2024-09-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Diary/">Diary</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="📕D2024_8_24"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="单包管理和多包管理"><a href="#单包管理和多包管理" class="headerlink" title="单包管理和多包管理"></a>单包管理和多包管理</h1><p>单包管理和多包管理是指在软件项目中如何组织和管理依赖项的两种不同方法。以下是对这两种方法的解释：</p>
+<h3 id="单包管理（Single-Package-Management）"><a href="#单包管理（Single-Package-Management）" class="headerlink" title="单包管理（Single Package Management）"></a>单包管理（Single Package Management）</h3><p>单包管理是指在一个项目中只有一个 <a href="vscode-file://vscode-app/d:/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html"><code>package.json</code></a> 文件，所有的依赖项都在这个文件中定义。适用于小型项目或单一模块的项目。</p>
+<h4 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h4><ul>
+<li><strong>简单易管理</strong>：只有一个 <a href="vscode-file://vscode-app/d:/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html"><code>package.json</code></a> 文件，依赖项管理简单。</li>
+<li><strong>快速设置</strong>：项目设置和依赖项安装速度较快。</li>
+</ul>
+<h4 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h4><ul>
+<li><strong>不适合大型项目</strong>：对于大型项目或包含多个模块的项目，单包管理可能会变得复杂和难以维护。</li>
+<li><strong>依赖项冲突</strong>：不同模块可能需要不同版本的同一依赖项，单包管理难以处理这种情况。</li>
+</ul>
+<h3 id="多包管理（Monorepo-x2F-Multi-package-Management）"><a href="#多包管理（Monorepo-x2F-Multi-package-Management）" class="headerlink" title="多包管理（Monorepo &#x2F; Multi-package Management）"></a>多包管理（Monorepo &#x2F; Multi-package Management）</h3><p>多包管理是指在一个项目中包含多个子项目或模块，每个子项目或模块都有自己的 <a href="vscode-file://vscode-app/d:/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html"><code>package.json</code></a> 文件。常见的工具有 <a href="vscode-file://vscode-app/d:/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html">Lerna</a> 和 <a href="vscode-file://vscode-app/d:/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html">Yarn Workspaces</a>。</p>
+<h4 id="优点：-1"><a href="#优点：-1" class="headerlink" title="优点："></a>优点：</h4><ul>
+<li><strong>模块化</strong>：每个子项目或模块都有自己的依赖项和配置，模块化管理更清晰。</li>
+<li><strong>依赖项隔离</strong>：不同模块可以有不同版本的依赖项，避免冲突。</li>
+<li><strong>共享代码</strong>：可以在多个模块之间共享代码和依赖项。</li>
+</ul>
+<h4 id="缺点：-1"><a href="#缺点：-1" class="headerlink" title="缺点："></a>缺点：</h4><ul>
+<li><strong>复杂性增加</strong>：项目结构和依赖项管理变得更加复杂。</li>
+<li><strong>设置时间较长</strong>：初始设置和配置可能需要更多时间。</li>
+</ul>
+<h3 id="选择哪种管理方式？"><a href="#选择哪种管理方式？" class="headerlink" title="选择哪种管理方式？"></a>选择哪种管理方式？</h3><ul>
+<li><strong>小型项目或单一模块项目</strong>：单包管理更简单和高效。</li>
+<li><strong>大型项目或包含多个模块的项目</strong>：多包管理更适合，可以更好地组织和管理依赖项。</li>
+</ul>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><h4 id="单包管理"><a href="#单包管理" class="headerlink" title="单包管理"></a>单包管理</h4><p>{</p>
+<p>  “name”: “my-single-package-project”,</p>
+<p>  “version”: “1.0.0”,</p>
+<p>  “dependencies”: {</p>
+<p>    “express”: “^4.17.1”</p>
+<p>  }</p>
+<p>}</p>
+<h4 id="多包管理（使用-Lerna）"><a href="#多包管理（使用-Lerna）" class="headerlink" title="多包管理（使用 Lerna）"></a>多包管理（使用 Lerna）</h4><p>lerna init</p>
+<p>{</p>
+<p>  “name”: “my-monorepo”,</p>
+<p>  “private”: true,</p>
+<p>  “workspaces”: [</p>
+<p>    “packages&#x2F;*”</p>
+<p>  ]</p>
+<p>}</p>
+<p>每个子项目都有自己的 <a href="vscode-file://vscode-app/d:/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html"><code>package.json</code></a> 文件：</p>
+<p>{</p>
+<p>  “name”: “module1”,</p>
+<p>  “version”: “1.0.0”,</p>
+<p>  “dependencies”: {</p>
+<p>    “lodash”: “^4.17.21”</p>
+<p>  }</p>
+<p>}</p>
+<p>通过这些解释和示例，你应该能够理解单包管理和多包管理的区别，并根据项目需求选择合适的管理方式。</p>
+<h1 id="领域特定语言-DSL"><a href="#领域特定语言-DSL" class="headerlink" title="领域特定语言(DSL)"></a>领域特定语言(DSL)</h1><p>领域特定语言（Domain-Specific Language，DSL）是一种专门为特定应用领域设计的编程语言。与通用编程语言（如 Java、Python、C++ 等）不同，DSL 旨在提供更高效、更简洁的语法和功能，以解决特定领域的问题。</p>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ol>
+<li><strong>专注于特定领域</strong>：DSL 设计用于解决特定领域的问题，例如网页开发、数据库查询、文本处理等。</li>
+<li><strong>简洁性</strong>：DSL 通常具有简洁的语法，使得领域专家（而非专业程序员）也能轻松使用。</li>
+<li><strong>高效性</strong>：由于专注于特定领域，DSL 可以提供更高效的解决方案。</li>
+</ol>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><h4 id="SQL（结构化查询语言）"><a href="#SQL（结构化查询语言）" class="headerlink" title="SQL（结构化查询语言）"></a>SQL（结构化查询语言）</h4><p>SQL 是一种用于管理和操作关系数据库的 DSL。它提供了简洁的语法来执行复杂的数据库查询和操作。</p>
+<p>SELECT * FROM users WHERE age &gt; 30;</p>
+<h4 id="HTML（超文本标记语言）"><a href="#HTML（超文本标记语言）" class="headerlink" title="HTML（超文本标记语言）"></a>HTML（超文本标记语言）</h4><p>HTML 是一种用于创建网页的 DSL。它提供了简洁的标签语法来定义网页的结构和内容。</p>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<p>    <title>Example</title></p>
+</head>
+
+<body>
+
+<p>    <h1>Hello, World!</h1></p>
+</body>
+
+</html>
+
+<h4 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h4><p>正则表达式是一种用于文本匹配和处理的 DSL。它提供了简洁的语法来定义复杂的文本模式。</p>
+<p>\d{3}-\d{2}-\d{4}</p>
+<h4 id="JSX（JavaScript-XML）"><a href="#JSX（JavaScript-XML）" class="headerlink" title="JSX（JavaScript XML）"></a>JSX（JavaScript XML）</h4><p>JSX 是一种用于在 React 中编写组件的 DSL。它允许在 JavaScript 代码中嵌入类似 HTML 的语法。</p>
+<p>const element &#x3D; <h1>Hello, world!</h1>;</p>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol>
+<li><strong>提高生产力</strong>：DSL 提供了简洁的语法和高效的功能，使得开发人员可以更快地解决特定领域的问题。</li>
+<li><strong>易于理解</strong>：由于 DSL 专注于特定领域，其语法和功能通常更容易理解和使用。</li>
+<li><strong>减少错误</strong>：DSL 提供了专门的语法和功能，可以减少在特定领域中常见的错误。</li>
+</ol>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ol>
+<li><strong>局限性</strong>：DSL 只能用于特定领域，无法解决通用编程问题。</li>
+<li><strong>学习成本</strong>：开发人员需要学习和掌握多种 DSL，以应对不同领域的问题。</li>
+<li><strong>维护成本</strong>：DSL 可能需要专门的工具和环境来支持，增加了维护成本。</li>
+</ol>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>领域特定语言（DSL）在特定领域中提供了高效、简洁的解决方案。尽管它们有一些局限性，但在特定领域中使用 DSL 可以显著提高生产力和减少错误。<br><em>JSX和Vue template都是领域特定语言</em></p>
+<h1 id="JS运行时"><a href="#JS运行时" class="headerlink" title="JS运行时"></a>JS运行时</h1><p>JavaScript 运行时（JavaScript Runtime）是指执行 JavaScript 代码的环境。它提供了执行 JavaScript 代码所需的所有功能和 API。JavaScript 运行时通常包括以下几个关键组件：</p>
+<h3 id="1-JavaScript-引擎"><a href="#1-JavaScript-引擎" class="headerlink" title="1. JavaScript 引擎"></a>1. JavaScript 引擎</h3><p>JavaScript 引擎是解释和执行 JavaScript 代码的核心组件。常见的 JavaScript 引擎包括：</p>
+<ul>
+<li><strong>V8</strong>：由 Google 开发，用于 Chrome 浏览器和 Node.js。</li>
+<li><strong>SpiderMonkey</strong>：由 Mozilla 开发，用于 Firefox 浏览器。</li>
+<li><strong>JavaScriptCore</strong>：由 Apple 开发，用于 Safari 浏览器。</li>
+</ul>
+<h3 id="2-调用栈"><a href="#2-调用栈" class="headerlink" title="2. 调用栈"></a>2. 调用栈</h3><p>调用栈（Call Stack）是一个数据结构，用于跟踪函数调用。每当一个函数被调用时，它会被添加到调用栈的顶部。当函数执行完毕时，它会从调用栈中移除。</p>
+<h3 id="3-事件循环"><a href="#3-事件循环" class="headerlink" title="3. 事件循环"></a>3. 事件循环</h3><p>事件循环（Event Loop）是 JavaScript 运行时的核心机制之一。它负责管理异步操作，如定时器、网络请求和用户交互。事件循环不断检查调用栈是否为空，如果为空，它会从任务队列中取出一个任务并执行。</p>
+<h3 id="4-任务队列"><a href="#4-任务队列" class="headerlink" title="4. 任务队列"></a>4. 任务队列</h3><p>任务队列（Task Queue）是一个数据结构，用于存储待执行的任务。当异步操作完成时，相应的回调函数会被添加到任务队列中，等待事件循环执行。</p>
+<h3 id="5-Web-API（浏览器环境）"><a href="#5-Web-API（浏览器环境）" class="headerlink" title="5. Web API（浏览器环境）"></a>5. Web API（浏览器环境）</h3><p>在浏览器环境中，JavaScript 运行时还包括一组 Web API，如 DOM 操作、定时器（<code>setTimeout</code>、<code>setInterval</code>）、网络请求（<code>XMLHttpRequest</code>、<code>fetch</code>）等。这些 API 由浏览器提供，用于扩展 JavaScript 的功能。</p>
+<h3 id="6-Node-js-API（Node-js-环境）"><a href="#6-Node-js-API（Node-js-环境）" class="headerlink" title="6. Node.js API（Node.js 环境）"></a>6. Node.js API（Node.js 环境）</h3><p>在 Node.js 环境中，JavaScript 运行时包括一组 Node.js 特有的 API，如文件系统操作（<code>fs</code> 模块）、网络操作（<code>http</code> 模块）、进程管理（<code>process</code> 模块）等。这些 API 由 Node.js 提供，用于在服务器端执行 JavaScript 代码。</p>
+<h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h3><p>以下是一个简单的示例，展示了 JavaScript 运行时的工作原理：</p>
+<p>console.log(‘Start’);</p>
+<p>setTimeout(() &#x3D;&gt; {</p>
+<p>  console.log(‘Timeout’);</p>
+<p>}, 1000);</p>
+<p>console.log(‘End’);</p>
+<h3 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h3><ol>
+<li><strong>调用栈</strong>：<code>console.log(&#39;Start&#39;)</code> 被添加到调用栈并执行，输出 “Start”。</li>
+<li><strong>Web API</strong>：<code>setTimeout</code> 被调用，定时器被浏览器的 Web API 处理。</li>
+<li><strong>调用栈</strong>：<code>console.log(&#39;End&#39;)</code> 被添加到调用栈并执行，输出 “End”。</li>
+<li><strong>任务队列</strong>：1 秒后，定时器完成，回调函数被添加到任务队列。</li>
+<li><strong>事件循环</strong>：事件循环检查调用栈为空，从任务队列中取出回调函数并执行，输出 “Timeout”。</li>
+</ol>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>JavaScript 运行时是一个复杂的环境，包含多个组件和机制，用于解释和执行 JavaScript 代码。理解这些组件和机制有助于编写高效、可靠的 JavaScript 代码。</p>
+<h1 id="关于Node-js"><a href="#关于Node-js" class="headerlink" title="关于Node.js"></a>关于Node.js</h1><p>Node.js 是一个基于 Chrome V8 JavaScript 引擎的 JavaScript 运行时环境。它允许你在服务器端运行 JavaScript 代码，从而使 JavaScript 不再仅仅是浏览器中的脚本语言。Node.js 提供了一组丰富的 API，用于处理文件系统、网络、操作系统等底层功能，使得开发高性能、可扩展的网络应用变得更加容易。</p>
+<h3 id="主要特点"><a href="#主要特点" class="headerlink" title="主要特点"></a>主要特点</h3><ol>
+<li><p><strong>单线程事件驱动</strong>：Node.js 使用单线程事件驱动架构，通过事件循环机制处理并发请求。这使得 Node.js 能够处理大量并发连接，而不会因为线程切换而产生开销。</p>
+</li>
+<li><p><strong>非阻塞 I&#x2F;O</strong>：Node.js 的所有 I&#x2F;O 操作（如文件读写、网络请求等）都是非阻塞的，这意味着它们不会阻塞主线程。相反，这些操作会在完成后通过回调函数通知主线程，从而提高了性能和响应速度。</p>
+</li>
+<li><p><strong>跨平台</strong>：Node.js 可以运行在多个操作系统上，包括 Windows、macOS 和 Linux。</p>
+</li>
+<li><p><strong>丰富的模块系统</strong>：Node.js 提供了一个强大的模块系统（CommonJS），允许开发者轻松地引入和使用第三方库和模块。Node.js 的包管理器 npm（Node Package Manager）是世界上最大的开源库生态系统之一。</p>
+</li>
+</ol>
+<h3 id="主要组件"><a href="#主要组件" class="headerlink" title="主要组件"></a>主要组件</h3><ol>
+<li><p><strong>V8 引擎</strong>：Node.js 使用 Google 的 V8 引擎来解释和执行 JavaScript 代码。V8 引擎以其高性能和高效的垃圾回收机制而闻名。</p>
+</li>
+<li><p><strong>libuv</strong>：Node.js 使用 libuv 库来实现其事件驱动和异步 I&#x2F;O 操作。libuv 提供了跨平台的抽象层，使得 Node.js 能够在不同操作系统上运行。</p>
+</li>
+<li><p><strong>核心模块</strong>：Node.js 提供了一组核心模块，如 <code>fs</code>（文件系统）、<code>http</code>（HTTP 服务器）、<code>path</code>（路径处理）等，这些模块可以直接在 Node.js 环境中使用。</p>
+</li>
+</ol>
+<h3 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h3><p>以下是一个简单的 Node.js HTTP 服务器示例：</p>
+<p>const http &#x3D; require(‘http’);</p>
+<p>const hostname &#x3D; ‘127.0.0.1’;</p>
+<p>const port &#x3D; 3000;</p>
+<p>const server &#x3D; http.createServer((req, res) &#x3D;&gt; {</p>
+<p>  res.statusCode &#x3D; 200;</p>
+<p>  res.setHeader(‘Content-Type’, ‘text&#x2F;plain’);</p>
+<p>  res.end(‘Hello, World!\n’);</p>
+<p>});</p>
+<p>server.listen(port, hostname, () &#x3D;&gt; {</p>
+<p>  console.log(<code>Server running at http://$&#123;hostname&#125;:$&#123;port&#125;/</code>);</p>
+<p>});</p>
+<h3 id="解释-1"><a href="#解释-1" class="headerlink" title="解释"></a>解释</h3><ol>
+<li><strong>引入模块</strong>：使用 <code>require</code> 函数引入 Node.js 的 <code>http</code> 模块。</li>
+<li><strong>创建服务器</strong>：使用 <code>http.createServer</code> 方法创建一个 HTTP 服务器，并定义请求处理函数。</li>
+<li><strong>监听端口</strong>：使用 <code>server.listen</code> 方法让服务器监听指定的端口和主机名。</li>
+<li><strong>处理请求</strong>：在请求处理函数中设置响应状态码和头信息，并返回响应内容。</li>
+</ol>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ol>
+<li><strong>Web 服务器</strong>：Node.js 常用于构建高性能的 Web 服务器和 API 服务。</li>
+<li><strong>实时应用</strong>：Node.js 非常适合构建实时应用，如聊天应用、在线游戏等。</li>
+<li><strong>命令行工具</strong>：Node.js 可以用于构建各种命令行工具和脚本。</li>
+<li><strong>微服务架构</strong>：Node.js 常用于构建微服务架构中的各个服务。</li>
+</ol>
+<h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><p>Node.js 是一个强大的 JavaScript 运行时环境，提供了丰富的 API 和模块系统，使得开发高性能、可扩展的网络应用变得更加容易。它的单线程事件驱动架构和非阻塞 I&#x2F;O 特性使得它在处理并发请求时表现出色。</p>
+<h1 id="WASM"><a href="#WASM" class="headerlink" title="WASM"></a>WASM</h1><p>WebAssembly（WASM）是一种二进制指令格式，用于在现代 Web 浏览器中运行高性能应用程序。它是一种低级编程语言，设计用于补充 JavaScript，使得开发者可以在 Web 上运行接近原生性能的代码。WebAssembly 由 W3C WebAssembly 工作组开发，并得到了所有主要浏览器的支持。</p>
+<h3 id="主要特点-1"><a href="#主要特点-1" class="headerlink" title="主要特点"></a>主要特点</h3><ol>
+<li><strong>高性能</strong>：WebAssembly 代码在浏览器中运行时接近原生性能，因为它是编译后的二进制格式，直接在浏览器的虚拟机中执行。</li>
+<li><strong>跨平台</strong>：WebAssembly 是一种跨平台的标准，可以在任何支持 WebAssembly 的环境中运行，包括所有主要的 Web 浏览器。</li>
+<li><strong>语言无关</strong>：WebAssembly 支持多种编程语言，如 C、C++、Rust 等。开发者可以使用这些语言编写代码，然后编译成 WebAssembly 以在浏览器中运行。</li>
+<li><strong>安全性</strong>：WebAssembly 运行在一个沙盒环境中，具有与 JavaScript 相同的安全模型，确保代码的安全执行。</li>
+</ol>
+<h3 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h3><ol>
+<li><strong>编写代码</strong>：开发者使用支持 WebAssembly 的编程语言（如 C、C++、Rust）编写代码。</li>
+<li><strong>编译代码</strong>：使用 WebAssembly 编译器（如 Emscripten、Rust 编译器）将代码编译成 WebAssembly 二进制格式（.wasm 文件）。</li>
+<li><strong>加载和执行</strong>：在浏览器中使用 JavaScript 加载和执行 WebAssembly 模块。</li>
+</ol>
+<h3 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h3><p>以下是一个简单的 WebAssembly 示例，展示了如何在浏览器中加载和执行 WebAssembly 模块。</p>
+<h4 id="C-代码（hello-c）"><a href="#C-代码（hello-c）" class="headerlink" title="C 代码（hello.c）"></a>C 代码（hello.c）</h4><p>#include &lt;stdio.h&gt;</p>
+<p>void hello() {</p>
+<p>    printf(“Hello, WebAssembly!\n”);</p>
+<p>}</p>
+<h4 id="编译-C-代码"><a href="#编译-C-代码" class="headerlink" title="编译 C 代码"></a>编译 C 代码</h4><p>使用 Emscripten 将 C 代码编译成 WebAssembly：</p>
+<p>emcc hello.c -s WASM&#x3D;1 -o hello.html</p>
+<h4 id="JavaScript-代码（index-js）"><a href="#JavaScript-代码（index-js）" class="headerlink" title="JavaScript 代码（index.js）"></a>JavaScript 代码（index.js）</h4><p>fetch(‘hello.wasm’)</p>
+<p>  .then(response &#x3D;&gt; response.arrayBuffer())</p>
+<p>  .then(bytes &#x3D;&gt; WebAssembly.instantiate(bytes))</p>
+<p>  .then(results &#x3D;&gt; {</p>
+<p>    const instance &#x3D; results.instance;</p>
+<p>    instance.exports.hello();</p>
+<p>  });</p>
+<h4 id="HTML-代码（index-html）"><a href="#HTML-代码（index-html）" class="headerlink" title="HTML 代码（index.html）"></a>HTML 代码（index.html）</h4><!DOCTYPE html>
+
+<html>
+
+<head>
+
+<p>    <title>WebAssembly Example</title></p>
+</head>
+
+<body>
+
+<p>    <script src="index.js"></script></p>
+</body>
+
+</html>
+
+<h3 id="应用场景-1"><a href="#应用场景-1" class="headerlink" title="应用场景"></a>应用场景</h3><ol>
+<li><strong>高性能计算</strong>：WebAssembly 非常适合需要高性能计算的应用，如图像处理、视频编辑、游戏等。</li>
+<li><strong>跨平台库</strong>：可以将现有的 C&#x2F;C++ 库编译成 WebAssembly，以便在 Web 上使用。</li>
+<li><strong>实时应用</strong>：WebAssembly 可以用于构建实时应用，如在线游戏、实时数据分析等。</li>
+</ol>
+<h3 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h3><p>WebAssembly 是一种强大的技术，允许开发者在 Web 浏览器中运行高性能应用程序。它补充了 JavaScript，使得开发者可以使用多种编程语言编写代码，并在 Web 上实现接近原生的性能。WebAssembly 的跨平台特性和高性能使其成为现代 Web 开发的重要工具。</p>
+<h1 id="Nuxt-js和Vue"><a href="#Nuxt-js和Vue" class="headerlink" title="Nuxt.js和Vue"></a>Nuxt.js和Vue</h1><p>Nuxt.js 是一个基于 Vue.js 的开源框架，用于构建服务端渲染（SSR）和静态站点生成（SSG）的应用程序。它简化了 Vue.js 应用的开发过程，提供了许多开箱即用的功能，如路由、状态管理、代码分割等。</p>
+<h3 id="主要特点-2"><a href="#主要特点-2" class="headerlink" title="主要特点"></a>主要特点</h3><ol>
+<li><strong>服务端渲染（SSR）</strong>：Nuxt.js 提供了开箱即用的服务端渲染支持，可以显著提高应用的性能和 SEO。</li>
+<li><strong>静态站点生成（SSG）</strong>：Nuxt.js 可以将应用编译成静态文件，适合部署到静态站点托管服务，如 GitHub Pages、Netlify 等。</li>
+<li><strong>模块化</strong>：Nuxt.js 提供了丰富的模块系统，可以轻松集成各种功能，如 PWA 支持、Axios、Auth 等。</li>
+<li><strong>自动路由生成</strong>：Nuxt.js 根据 <code>pages</code> 目录中的文件结构自动生成应用的路由，无需手动配置。</li>
+<li><strong>开发体验</strong>：Nuxt.js 提供了热模块替换（HMR）、自动代码分割、静态资源优化等功能，提升开发体验。</li>
+</ol>
+<h3 id="工作原理-1"><a href="#工作原理-1" class="headerlink" title="工作原理"></a>工作原理</h3><p>Nuxt.js 基于 Vue.js 和 Node.js 构建，使用 Vue.js 作为前端框架，Node.js 作为服务端渲染的运行时环境。它通过配置文件 <code>nuxt.config.js</code> 来管理应用的各种设置和插件。</p>
+<h3 id="示例-5"><a href="#示例-5" class="headerlink" title="示例"></a>示例</h3><p>以下是一个简单的 Nuxt.js 应用示例：</p>
+<h4 id="安装-Nuxt-js"><a href="#安装-Nuxt-js" class="headerlink" title="安装 Nuxt.js"></a>安装 Nuxt.js</h4><p>使用 npm 或 yarn 安装 Nuxt.js：</p>
+<p>npx create-nuxt-app my-nuxt-app</p>
+<h1 id="或者"><a href="#或者" class="headerlink" title="或者"></a>或者</h1><p>yarn create nuxt-app my-nuxt-app</p>
+<h4 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h4><p>创建的 Nuxt.js 应用的目录结构如下：</p>
+<p>my-nuxt-app&#x2F;</p>
+<p>├── assets&#x2F;</p>
+<p>├── components&#x2F;</p>
+<p>├── layouts&#x2F;</p>
+<p>├── middleware&#x2F;</p>
+<p>├── pages&#x2F;</p>
+<p>├── plugins&#x2F;</p>
+<p>├── static&#x2F;</p>
+<p>├── store&#x2F;</p>
+<p>├── nuxt.config.js</p>
+<p>├── package.json</p>
+<h4 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h4><p>在 <code>pages</code> 目录中创建一个新的页面文件 <code>index.vue</code>：</p>
+<template>
+
+<p>  <div></p>
+<p>    <h1>Welcome to Nuxt.js</h1></p>
+<p>  </div></p>
+</template>
+
+<script>
+
+export default {
+
+  name: 'HomePage'
+
+}
+
+</script>
+
+<h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4><p>在 <code>nuxt.config.js</code> 中配置应用的基本设置：</p>
+<p>export default {</p>
+<p>  &#x2F;&#x2F; Global page headers</p>
+<p>  head: {</p>
+<p>    title: ‘my-nuxt-app’,</p>
+<p>    meta: [</p>
+<p>      { charset: ‘utf-8’ },</p>
+<p>      { name: ‘viewport’, content: ‘width&#x3D;device-width, initial-scale&#x3D;1’ },</p>
+<p>      { hid: ‘description’, name: ‘description’, content: ‘’ }</p>
+<p>    ],</p>
+<p>    link: [{ rel: ‘icon’, type: ‘image&#x2F;x-icon’, href: ‘&#x2F;favicon.ico’ }]</p>
+<p>  },</p>
+<p>  &#x2F;&#x2F; Global CSS</p>
+<p>  css: [],</p>
+<p>  &#x2F;&#x2F; Plugins to run before rendering page</p>
+<p>  plugins: [],</p>
+<p>  &#x2F;&#x2F; Auto import components</p>
+<p>  components: true,</p>
+<p>  &#x2F;&#x2F; Modules for dev and build (recommended)</p>
+<p>  buildModules: [],</p>
+<p>  &#x2F;&#x2F; Modules</p>
+<p>  modules: [],</p>
+<p>  &#x2F;&#x2F; Build Configuration</p>
+<p>  build: {}</p>
+<p>}</p>
+<h4 id="运行应用"><a href="#运行应用" class="headerlink" title="运行应用"></a>运行应用</h4><p>在项目根目录下运行以下命令启动开发服务器：</p>
+<p>npm run dev</p>
+<h1 id="或者-1"><a href="#或者-1" class="headerlink" title="或者"></a>或者</h1><p>yarn dev</p>
+<h3 id="应用场景-2"><a href="#应用场景-2" class="headerlink" title="应用场景"></a>应用场景</h3><ol>
+<li><strong>内容管理系统（CMS）</strong>：Nuxt.js 非常适合构建内容管理系统，结合静态站点生成可以实现高性能和 SEO 友好的网站。</li>
+<li><strong>电子商务网站</strong>：通过服务端渲染和静态站点生成，Nuxt.js 可以显著提高电子商务网站的性能和用户体验。</li>
+<li><strong>单页应用（SPA）</strong>：Nuxt.js 提供了丰富的功能和模块，使得构建复杂的单页应用变得更加容易。</li>
+</ol>
+<h3 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a>总结</h3><p>Nuxt.js 是一个强大的 Vue.js 框架，提供了服务端渲染和静态站点生成的支持，简化了 Vue.js 应用的开发过程。它的模块化设计和丰富的功能使得开发高性能、可扩展的 Web 应用变得更加容易。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://qhiqiefnqe-f.github.io">Hrein</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://qhiqiefnqe-f.github.io/2024/08/24/Diary/2024_8_24/">https://qhiqiefnqe-f.github.io/2024/08/24/Diary/2024_8_24/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://qhiqiefnqe-f.github.io" target="_blank">Hrein's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/frontend/">frontend</a></div><div class="post_share"><div class="social-share" data-image="/assets/Hrein.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/09/04/Diary/2024_9_4/" title="📕D2024_9_4"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">📕D2024_9_4</div></div></a></div><div class="next-post pull-right"><a href="/2024/07/25/Diary/2024_7_25/" title="📕D2024_7_25"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">📕D2024_7_25</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/07/25/Diary/2024_7_25/" title="📕D2024_7_25"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-25</div><div class="title">📕D2024_7_25</div></div></a></div><div><a href="/2024/09/07/Diary/2024_9_7/" title="📕D2024_9_7"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-07</div><div class="title">📕D2024_9_7</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/assets/Hrein.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Hrein</div><div class="author-info__description">wuhu</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%95%E5%8C%85%E7%AE%A1%E7%90%86%E5%92%8C%E5%A4%9A%E5%8C%85%E7%AE%A1%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">单包管理和多包管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E5%8C%85%E7%AE%A1%E7%90%86%EF%BC%88Single-Package-Management%EF%BC%89"><span class="toc-number">1.0.1.</span> <span class="toc-text">单包管理（Single Package Management）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E7%82%B9%EF%BC%9A"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">优点：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%BA%E7%82%B9%EF%BC%9A"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">缺点：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%8C%85%E7%AE%A1%E7%90%86%EF%BC%88Monorepo-x2F-Multi-package-Management%EF%BC%89"><span class="toc-number">1.0.2.</span> <span class="toc-text">多包管理（Monorepo &#x2F; Multi-package Management）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%98%E7%82%B9%EF%BC%9A-1"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">优点：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%BA%E7%82%B9%EF%BC%9A-1"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">缺点：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%93%AA%E7%A7%8D%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F%EF%BC%9F"><span class="toc-number">1.0.3.</span> <span class="toc-text">选择哪种管理方式？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.0.4.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E5%8C%85%E7%AE%A1%E7%90%86"><span class="toc-number">1.0.4.1.</span> <span class="toc-text">单包管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E5%8C%85%E7%AE%A1%E7%90%86%EF%BC%88%E4%BD%BF%E7%94%A8-Lerna%EF%BC%89"><span class="toc-number">1.0.4.2.</span> <span class="toc-text">多包管理（使用 Lerna）</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A2%86%E5%9F%9F%E7%89%B9%E5%AE%9A%E8%AF%AD%E8%A8%80-DSL"><span class="toc-number">2.</span> <span class="toc-text">领域特定语言(DSL)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E7%82%B9"><span class="toc-number">2.0.1.</span> <span class="toc-text">特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1"><span class="toc-number">2.0.2.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL%EF%BC%88%E7%BB%93%E6%9E%84%E5%8C%96%E6%9F%A5%E8%AF%A2%E8%AF%AD%E8%A8%80%EF%BC%89"><span class="toc-number">2.0.2.1.</span> <span class="toc-text">SQL（结构化查询语言）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTML%EF%BC%88%E8%B6%85%E6%96%87%E6%9C%AC%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%EF%BC%89"><span class="toc-number">2.0.2.2.</span> <span class="toc-text">HTML（超文本标记语言）</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">Hello, World!</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">正则表达式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JSX%EF%BC%88JavaScript-XML%EF%BC%89"><span class="toc-number">3.0.0.2.</span> <span class="toc-text">JSX（JavaScript XML）</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">Hello, world!</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E7%82%B9"><span class="toc-number">4.0.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%BA%E7%82%B9"><span class="toc-number">4.0.2.</span> <span class="toc-text">缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">4.0.3.</span> <span class="toc-text">结论</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JS%E8%BF%90%E8%A1%8C%E6%97%B6"><span class="toc-number">5.</span> <span class="toc-text">JS运行时</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-JavaScript-%E5%BC%95%E6%93%8E"><span class="toc-number">5.0.1.</span> <span class="toc-text">1. JavaScript 引擎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%B0%83%E7%94%A8%E6%A0%88"><span class="toc-number">5.0.2.</span> <span class="toc-text">2. 调用栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF"><span class="toc-number">5.0.3.</span> <span class="toc-text">3. 事件循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BB%BB%E5%8A%A1%E9%98%9F%E5%88%97"><span class="toc-number">5.0.4.</span> <span class="toc-text">4. 任务队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Web-API%EF%BC%88%E6%B5%8F%E8%A7%88%E5%99%A8%E7%8E%AF%E5%A2%83%EF%BC%89"><span class="toc-number">5.0.5.</span> <span class="toc-text">5. Web API（浏览器环境）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Node-js-API%EF%BC%88Node-js-%E7%8E%AF%E5%A2%83%EF%BC%89"><span class="toc-number">5.0.6.</span> <span class="toc-text">6. Node.js API（Node.js 环境）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-2"><span class="toc-number">5.0.7.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%87%8A"><span class="toc-number">5.0.8.</span> <span class="toc-text">解释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">5.0.9.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8ENode-js"><span class="toc-number">6.</span> <span class="toc-text">关于Node.js</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9"><span class="toc-number">6.0.1.</span> <span class="toc-text">主要特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E7%BB%84%E4%BB%B6"><span class="toc-number">6.0.2.</span> <span class="toc-text">主要组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-3"><span class="toc-number">6.0.3.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%87%8A-1"><span class="toc-number">6.0.4.</span> <span class="toc-text">解释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">6.0.5.</span> <span class="toc-text">应用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-1"><span class="toc-number">6.0.6.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#WASM"><span class="toc-number">7.</span> <span class="toc-text">WASM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9-1"><span class="toc-number">7.0.1.</span> <span class="toc-text">主要特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">7.0.2.</span> <span class="toc-text">工作原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-4"><span class="toc-number">7.0.3.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#C-%E4%BB%A3%E7%A0%81%EF%BC%88hello-c%EF%BC%89"><span class="toc-number">7.0.3.1.</span> <span class="toc-text">C 代码（hello.c）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E8%AF%91-C-%E4%BB%A3%E7%A0%81"><span class="toc-number">7.0.3.2.</span> <span class="toc-text">编译 C 代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JavaScript-%E4%BB%A3%E7%A0%81%EF%BC%88index-js%EF%BC%89"><span class="toc-number">7.0.3.3.</span> <span class="toc-text">JavaScript 代码（index.js）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTML-%E4%BB%A3%E7%A0%81%EF%BC%88index-html%EF%BC%89"><span class="toc-number">7.0.3.4.</span> <span class="toc-text">HTML 代码（index.html）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-1"><span class="toc-number">7.0.4.</span> <span class="toc-text">应用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-2"><span class="toc-number">7.0.5.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Nuxt-js%E5%92%8CVue"><span class="toc-number">8.</span> <span class="toc-text">Nuxt.js和Vue</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9-2"><span class="toc-number">8.0.1.</span> <span class="toc-text">主要特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86-1"><span class="toc-number">8.0.2.</span> <span class="toc-text">工作原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-5"><span class="toc-number">8.0.3.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Nuxt-js"><span class="toc-number">8.0.3.1.</span> <span class="toc-text">安装 Nuxt.js</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%96%E8%80%85"><span class="toc-number">9.</span> <span class="toc-text">或者</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-number">9.0.0.1.</span> <span class="toc-text">目录结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B5%E9%9D%A2"><span class="toc-number">9.0.0.2.</span> <span class="toc-text">创建页面</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">10.</span> <span class="toc-text">Welcome to Nuxt.js</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">10.0.0.1.</span> <span class="toc-text">配置文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E5%BA%94%E7%94%A8"><span class="toc-number">10.0.0.2.</span> <span class="toc-text">运行应用</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%96%E8%80%85-1"><span class="toc-number">11.</span> <span class="toc-text">或者</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-2"><span class="toc-number">11.0.1.</span> <span class="toc-text">应用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-3"><span class="toc-number">11.0.2.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/leetCodeNote/1.%E6%95%B0%E7%BB%84/" title="🚷数组">🚷数组</a><time datetime="2024-09-07T06:28:29.000Z" title="发表于 2024-09-07 14:28:29">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/leetCodeNote/3.%E5%93%88%E5%B8%8C%E8%A1%A8/" title="🚷哈希表">🚷哈希表</a><time datetime="2024-09-07T06:28:29.000Z" title="发表于 2024-09-07 14:28:29">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/leetCodeNote/4.%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="🚷字符串">🚷字符串</a><time datetime="2024-09-07T06:28:29.000Z" title="发表于 2024-09-07 14:28:29">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/leetCodeNote/2.%E9%93%BE%E8%A1%A8/" title="🚷链表">🚷链表</a><time datetime="2024-09-07T06:28:29.000Z" title="发表于 2024-09-07 14:28:29">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/09/07/leetCodeNote/5.%E5%8F%8C%E6%8C%87%E9%92%88/" title="🚷双指针">🚷双指针</a><time datetime="2024-09-07T06:28:29.000Z" title="发表于 2024-09-07 14:28:29">2024-09-07</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Hrein</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
