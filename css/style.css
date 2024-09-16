@@ -1,3 +1,21 @@
 #footer {
     background-color:#096d7259 ;
 }
+
+.card-info{
+    
+    background-color: transparent !important;
+    background-image:linear-gradient(180deg, rgba(255,255,255, 0.45), rgba(255,255,255, 0.46)) !important; /* 使用 RGBA 颜色值设置半透明背景 */
+    backdrop-filter:blur(20px) !important; /* 设置毛玻璃效果 */
+    -webkit-backdrop-filter: blur(10px); /* 兼容 WebKit 浏览器 */
+    
+}
+
+.card-announcement{
+    
+    background-color: transparent !important;
+    background-image:linear-gradient(135deg, rgb(255, 255, 255,0.43), rgb(255, 255, 255,0.43)) !important; /* 使用 RGBA 颜色值设置半透明背景 */
+    backdrop-filter:blur(20px) !important; /* 设置毛玻璃效果 */
+    -webkit-backdrop-filter: blur(10px); /* 兼容 WebKit 浏览器 */
+    
+}
